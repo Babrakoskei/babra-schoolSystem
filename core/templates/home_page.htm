@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <title>
+        {% block title %}School Management{% endblock %}
+    </title>
+</head>
+
+    <style>    
+    .sidenav {
+        height:100%;
+        width:160px;
+        position: fixed;
+        z-index:1;
+        top:0;
+        left:0;
+        background-color:rgb(241, 195, 217);
+        overflow-x:hidden;
+        padding-top:20px;
+    }
+    .sidenav a {
+        padding:70px 8px 6px 16px;
+        text-decoration: none;
+        font-size:25px;
+        color: #111;
+        display:block;
+    }
+
+    .sidenav a:hover{
+        color:#f1f1f1;
+    }	
+    
+    .main{
+        margin-left:160px;
+        padding: 0px 10px;
+    }    
+
+    .pic{
+    height: 70px;
+    border-radius: 36px;
+    position: absolute;
+    top: 2%;
+    left: 78%;
+    }
+
+    .picture3{
+    margin-left: -50px;
+    height:100%;
+    width:75%;
+    position: fixed;
+    z-index:1;
+    top: 110px;
+    overflow-x:hidden;
+    }
+
+    body{
+    background-image: url("https://assets.vogue.com/photos/603cf262e57a108439076bb1/master/w_1600%2Cc_limit/08b-nairobi-kenya-silicon-savannah-women-coders.jpg");
+    margin-left: 300px;
+    height:50%;
+    width:80%;
+    position: fixed;
+    z-index:1;
+    top: 0;
+    overflow-x:hidden;
+    background-size: 100%;
+    }
+
+    .title{
+        margin-left: 230px;
+    }
+
+    .student{
+        left: 30px;
+        width: 150px;
+        height: 60px;
+        position: absolute;
+        top: 90%;
+        background-color: rgb(83, 3, 83);
+        z-index: 999;
+        border: 1px solid rgb(255, 255, 255);
+        box-shadow: rgb(241, 195, 217);
+    }
+
+    .trainer{
+        left: 230px;
+        width: 150px;
+        height: 60px;
+        position: absolute;
+        top: 90%;
+        background-color: rgb(83, 3, 83);
+        color: #f1f1f1;
+        z-index: 999;
+        border: 1px solid rgb(255, 255, 255);
+        box-shadow: rgb(241, 195, 217);
+    }
+
+    .course{
+        left: 430px;
+        width: 150px;
+        height: 60px;
+        position: absolute;
+        top: 90%;
+        background-color: rgb(83, 3, 83);
+        color: #f1f1f1;
+        z-index: 999;
+        border: 1px solid rgb(255, 255, 255);
+        box-shadow: rgb(241, 195, 217);
+    }
+
+    .events{
+        left: 630px;
+        width: 150px;
+        height: 60px;
+        position: absolute;
+        top: 90%;
+        background-color: rgb(83, 3, 83);
+        color: #f1f1f1;
+        z-index: 999;
+        border: 1px solid rgb(255, 255, 255);
+        box-shadow: rgb(241, 195, 217);
+    }
+
+    .student a{
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .trainer a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .course a{
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .events a{
+        text-decoration: none;
+        color: #000000;
+    }
+    
+    button:hover{
+    background-color: #f1f1f1;
+    cursor: pointer;
+    color: black;
+    border: 1px solid purple;
+    }
+    
+    </style>
+
+<body>    
+    <div class="sidenav">
+        <a href="{%url 'student_list'%}">Student</a>
+		<a href="{%url 'trainer_list'%}">Trainer</a>
+		<a href="{%url 'course_list'%}">Course</a>
+        <a href="{%url 'cal:calendar'%}">Events</a>
+	</div>
+    
+	{% block content %}
+
+    <img class = "pic" src="http://aspirationtech.org/files/WeapSocAkiraChixlogo.jpg">
+    <img class="picture3" src="https://assets.vogue.com/photos/603cf262e57a108439076bb1/master/w_1600%2Cc_limit/08b-nairobi-kenya-silicon-savannah-women-coders.jpg">
+    <h1 class="title">Management Portal</h1>
+
+    <div class="buttons">
+    <button class="student"><a href="{%url 'register_student'%}">{{student}}Student</a></button>
+    <button class="trainer"><a href="{%url 'register_trainer'%}">{{trainer}}Trainer</a></button>    
+    <button class="course"><a href="{%url 'register_courses'%}">{{course}}Courses</a></button>
+    <button class="events"><a href="{%url 'cal:calendar'%}">{{events}}Events</a></button>
+    </div>
+	{% endblock %}  
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
