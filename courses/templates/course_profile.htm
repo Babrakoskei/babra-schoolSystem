@@ -9,7 +9,7 @@
   <title>Course Profile</title>
 <style>
 body{
-    background-image: url("https://uploads-ssl.webflow.com/5e72ed345a0058a3332497f7/5eb9c614ce4ca10ba96f88b2_BUilt%20In%20Africa%20Articel.jpg");
+    background-image: url("https://assets.vogue.com/photos/603cf262e57a108439076bb1/master/w_1600%2Cc_limit/08b-nairobi-kenya-silicon-savannah-women-coders.jpg");
     margin-left: 300px;
     height:50%;
     width:80%;
@@ -18,6 +18,7 @@ body{
     top: 0;
     overflow-x:hidden;
     background-size: 100%;
+    
 }
 </style>
 </head>
@@ -30,19 +31,12 @@ body{
       <div style="display: flex; flex-direction: row">
         <h5 class="card-title">Course Name: {{course.course_name}}</h5>
         {#  Colored cirlce:#}
-        <div style="
-          background: rgb(121, 12, 72);
-          width: 20px;
-          height: 20px;
-          margin-left: 180px;
-          border-radius: 50%;
-          margin-top: 10px;
-        "></div>
+     
       </div>
-      <p class="card-text">Course Code: {{course.course_id}}</p>
       <p class="card-text">Course Trainer: {{course.course_trainer}}</p>
-      <a href="/command/1/color" class="btn btn-primary" style="background-color: rgb(85, 0, 47); border: 1px rgb(85, 0, 47)">Edit Course</a>
-      <a href="/command/1/delete" class="btn btn-primary" style="background-color: rgb(85, 0, 47); border: 1px rgb(85, 0, 47)">Delete</a>
+      <p class="card-text">Course Description: {{course.course_description}}</p>
+      <a href="/command/1/color" class="btn btn-primary" style="background-color: purple; border: 1px purple">Edit Course</a>
+      <a href="/command/1/delete" class="btn btn-primary" style="background-color: purple; border: 1px purple">Delete</a>
     </div>
   </div>
 </div>

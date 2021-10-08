@@ -23,41 +23,51 @@
 </head>
 
 <body>
+ <h1>CodeHive Calendar</h1>
+  <img src="https://miro.medium.com/max/1838/1*dIXJZdx-BAkU13P0qoUjuw.jpeg" alt="">
   <style>
-
+    
+    html { overflow-y: scroll; }
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+      }
+      
 body {
-  background-image: url("https://pbs.twimg.com/media/EQEtxW4XsAAi_8t.jpg");
-  margin-left: 175px;
-  height:50%;
+overflow: hidden;
+z-index: 2;
+
+
+}
+.img{
   width:100%;
-  position: fixed;
-  z-index:1;
-  top: 0;
-  overflow-x:hidden;   
-  background-repeat: no-repeat;   
-  background-size: 115%;
-  font-family: "ptsans", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  z-index: 1;
+  overflow: hidden;
+  
+
 }
 
 .info {
-  border-color: rgb(219, 53, 131);
-  color:rgb(219, 53, 131);
+  border-color:purple;
+  color: purple;
 }
 
 .info:hover {
-  background:palevioletred;
+  background:purple;
   color: white;
 }
 
 .info {
-  border-color: rgb(219, 53, 131);
-  color:rgb(219, 53, 131);
+  border-color: purple;
+  color:purple;
   margin-right:310px;
   margin-left:-30px;
 }
 
 .info:hover {
-  background:rgb(219, 53, 131);
+  background:purple;
   color: white;
 }
 
@@ -66,25 +76,33 @@ body {
   background-color: white;
   margin-left: 30%;
   width: 500px;
-  border:3px solid rgb(219, 53, 131);
-  box-shadow: 8px 8px 8px 9px rgb(219, 53, 131);
+  border:3px solid purple;
+  box-shadow: 8px 8px 8px 9px purple;
   border-radius: 10px;
 }
 
 button{
-  background-color: rgb(219, 53, 131);
+
+  background-color: purple;
   color: white;
   border-radius: 10px;
   padding: 10px;
-  align-items: center;
   width: 300px;
-  margin-right: 71px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+  
 }
 
 h1{
   padding-top: 10px;
-  color:rgb(219, 53, 131);
-  margin-left: 100px;
+  color:purple;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 p{
@@ -98,11 +116,11 @@ form{
 }
 
 .form-group{
-  border-color: rgb(219, 53, 131);
+  border-color: purple;;
 }
 
 hr{
-  background-color:rgb(219, 53, 131);
+  background-color:purple;;
   height: 3px;
   margin-left: -30%;
   margin-top: 0.3%;
@@ -118,11 +136,11 @@ hr{
 
 .clearfix {
   margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 300px;
 }
-
-
-
-
 
 /* App styles */
 .title {
@@ -133,14 +151,14 @@ hr{
 
 .calendar {
   width: 58%;
-  margin-left: 8%;
+  margin-left: 20%;
   font-size: 13px;
   background:rgb(27, 21, 24);
   color: white;
 }
 
 .calendar tr, .calendar td{
-  border: 1px solid rgb(219, 53, 131);
+  border: 1px solid purple;;
 }
 
 .calendar td:hover{
@@ -174,7 +192,7 @@ ul {
 }
 
 a {
-  color:rgb(219, 53, 131);
+  color:purple;
 }
 
 textarea{
@@ -182,7 +200,7 @@ textarea{
 }
   </style>
 
-  <h1 class="title">{% block title %}{% endblock %}</h1>
+
   <hr>
 
   {% block content %}
